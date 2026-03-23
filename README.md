@@ -2,7 +2,7 @@
 
 Real-time pose detection using [MediaPipe](https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker) inside a Max/MSP `jweb` object. Detects body landmarks from a webcam feed and sends the data into Max as a dictionary for further processing (e.g. driving LED boards, visuals, or sound).
 
-Based on [jweb-mediapipe](https://github.com/robtherich/jweb-mediapipe) by Rob the Rich.
+Based on [jweb-mediapipe](https://github.com/robtherich/jweb-mediapipe) by Rob Ramirez.
 
 ## How it works
 
