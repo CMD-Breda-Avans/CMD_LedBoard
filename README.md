@@ -1,6 +1,6 @@
 # CMD LedBoard — MediaPipe Pose Detection in Max/MSP
 
-An interactive installation for the CMD Breda MediaLab that drives a large LED board with real-time body tracking. Visitors step in front of a camera—their pose is detected using [MediaPipe](https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker) running inside a Max/MSP `jweb` object—and the resulting visuals are mapped onto a 61×31 LED board (1891 LEDs) via [Protopixel](https://protopixel.net).
+An interactive installation for the CMD Breda MediaLab that drives a large LED board with real-time body tracking. Visitors step in front of a camera—their pose is detected using [MediaPipe](https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker) running inside a Max/MSP `jweb` object—and the resulting visuals are mapped onto a 61×31 LED board (1891 LEDs) via [Protopixel](https://www.protopixel.io).
 
 Based on [jweb-mediapipe](https://github.com/robtherich/jweb-mediapipe) by Rob Ramirez.
 
@@ -56,18 +56,18 @@ The `jweb` object sends messages to `pose.js` via bound inlets:
 
 ## Protopixel LED mapping
 
-The `CMD_OpenDag.ppxproj` file configures [Protopixel](https://protopixel.net) to map the visual output onto the LED board:
+The `CMD_OpenDag.ppxproj` file configures [Protopixel](https://www.protopixel.io) to map the visual output onto the LED board:
 
 - **1891 LEDs** in a 61×31 grid, split across **16 matrix panels** in snake wiring
 - **Input**: Syphon feed from Max (`jit.gl.syphonserver`), server name `Max`
 - **Output**: ArtNet to 4 controllers at `10.0.0.2`–`10.0.0.5`, universes 1/5/9/13
 
-To use: open `CMD_OpenDag.ppxproj` in [Protopixel Creator](https://protopixel.net/creator/) and make sure the Max patch is running with Syphon output enabled.
+To use: open `CMD_OpenDag.ppxproj` in [Protopixel Mapping Tool](https://www.protopixel.io/product/mapping-tool) and make sure the Max patch is running with Syphon output enabled.
 
 ## Requirements
 
 - **Max/MSP 8.x+** with `jweb` and Syphon support
-- **[Protopixel Creator](https://protopixel.net/creator/)** for LED panel mapping
+- **[Protopixel Mapping Tool](https://www.protopixel.io/product/mapping-tool)** for LED panel mapping
 - Internet connection (MediaPipe model and libraries are loaded from CDN)
 - A webcam
 - LED panels with ArtNet controllers (for the full installation)
